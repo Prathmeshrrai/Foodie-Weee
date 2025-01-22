@@ -1,0 +1,71 @@
+/* 
+.card{
+    margin: 10px;
+    width: 200px; 
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card img{
+    width:100%;
+    padding: 2px;
+} 
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: span;
+}
+
+.card>img>dish{
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px;
+} */ 
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    border:5px solid blue;
+}
+
+.nav-items>ul{
+    list-style-type: none;
+    display: flex;
+    padding: 10px;
+}
+
+.nav-items>ul>li{
+    padding: 10px;
+}
+
+.img-str{
+    width: 100px;
+}
+
+.card {
+    margin: 10px;
+    width: 200px; 
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%; /* Makes the image fit the card width */
+    height: 200px; /* Ensures a consistent height for all images */
+    object-fit: cover; /* Ensures proper scaling and cropping */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds space between cards */
+    justify-content: center; /* Centers the cards within the container */
+}

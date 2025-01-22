@@ -1,0 +1,99 @@
+/* Header.css */
+
+/* Overall header styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  /* Logo styling */
+  .img-str {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .img-str:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Navigation items container */
+  .nav-items ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  /* Individual navigation item */
+  .nav-items li {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ecf0f1;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-items li:hover {
+    color: #1abc9c;
+    transform: translateY(-3px);
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .nav-items ul {
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: #34495e;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      display: none; /* Hidden by default for hamburger menu */
+    }
+  
+    .nav-items.active ul {
+      display: flex; /* Show menu when active */
+    }
+  
+    .nav-items li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Add hamburger menu for mobile view */
+  .hamburger-menu {
+    display: none;
+    font-size: 2rem;
+    color: #ecf0f1;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .hamburger-menu {
+      display: block;
+    }
+  }
+  
+  /* Sticky header shadow effect on scroll */
+  .header.scrolled {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Accessibility focus styling */
+  .nav-items li:focus {
+    outline: 2px solid #1abc9c;
+    outline-offset: 3px;
+  }
+  
