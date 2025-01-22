@@ -2215,3 +2215,15 @@ git branch -M main
 git push -u origin main
 
 https://github.com/Prathmeshrrai/Foodie-Wee.git
+
+
+          {/* {restaurants && restaurants.length > 0 ? (
+          restaurants.map((restaurant) => (
+            <RestrauntCard
+              // key={restaurant.info.rescard}
+              restaurant={restaurant.info}
+            />
+          ))
+          ) : (
+          <Shimmer /> // Display a loading shimmer if data isn't available
+          )} */}
