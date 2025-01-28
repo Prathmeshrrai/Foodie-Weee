@@ -1,31 +1,3 @@
-/* 
-.card{
-    margin: 10px;
-    width: 200px; 
-    border: 2px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-}
-
-.card img{
-    width:100%;
-    padding: 2px;
-} 
-
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    grid-area: span;
-}
-
-.card>img>dish{
-    width: 100%; 
-    height: 200px; 
-    object-fit: cover; 
-    border-radius: 5px;
-} */ 
-
 .header{
     display: flex;
     justify-content: space-between;
@@ -45,6 +17,9 @@
 
 .img-str{
     width: 100px;
+    size-adjust: 100%;
+    flex-wrap: wrap;
+    object-fit: cover;
 }
 
 .card {
@@ -68,4 +43,18 @@
     flex-wrap: wrap;
     gap: 20px; /* Adds space between cards */
     justify-content: center; /* Centers the cards within the container */
+}
+
+.restaurant-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card{
+    width:200px;
+    height:200px;
+    background: lightgray;
+    margin: 20px;
+    border-radius: 10px;
+    gap: 20px;
 }

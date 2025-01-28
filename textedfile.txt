@@ -2227,3 +2227,101 @@ https://github.com/Prathmeshrrai/Foodie-Wee.git
           ) : (
           <Shimmer /> // Display a loading shimmer if data isn't available
           )} */}
+
+
+          const loggedInUser =() =>{
+    return true 
+}
+
+import { useState } from 'react';
+import './Header.css';
+
+export const Title = () => (
+    <a href='/'>
+        <img 
+            className='img-str'
+            alt="Ain't Starbucks" 
+            src="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/04/26110727/Starbucks-1.png"
+        />
+    </a>
+);
+
+const Header = () => {
+    const [isNavActive, setIsNavActive] = useState(false);
+
+    const handleScroll = () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return (
+        <div className='header'>
+            <Title />
+            <div className="hamburger-menu" onClick={() => setIsNavActive(!isNavActive)}>
+                ☰
+            </div>
+            <div className={`nav-items ${isNavActive ? 'active' : ''}`}>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                    <li>Cart</li>
+                </ul>
+            </div> 
+            {
+                (loggedInUser)
+            } 
+            <button >Login</button>
+        </div>
+    );
+};
+
+export default Header;
+
+import './Header.css';
+// export const Title = () => (
+//     <a href='/'>
+//     <img 
+//     className='img-str'
+//     alt="Ain't Starbuck" 
+//     src="https://bcassetcdn.com/public/blog/wp-content/uploads/2022/04/26110727/Starbucks-1.png"
+//     />
+//     </a>
+// )
+
+// const Header =() => {
+//     return (
+//         <div className='header'>
+//         <Title />
+//         <div className="nav-items">
+//             <ul>
+//                 <li>Home</li>
+//                 <li>About</li>
+//                 <li>Contact</li>
+//                 <li>Cart</li>
+//             </ul>
+//             </div>   
+//         </div>
+//     );
+// };
+
+// export default Header;
+
+const handleScroll = () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+        // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.99740&lng=79.00110&restaurantId=151518&catalog_qa=undefined&submitAction=ENTER"
