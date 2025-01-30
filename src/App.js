@@ -6,6 +6,7 @@ import Header from './components/Header.js';
 import Body from './components/Body.js';
 import About from './components/About.js';
 import Error from './components/Error.js';
+import Profile from './components/Profile.js';
 import Contact from './components/Contact.js';
 import RestaurantMenu from './components/RestaurantMenu.js';
 
@@ -37,6 +38,12 @@ import RestaurantMenu from './components/RestaurantMenu.js';
                 {
                     path:"/about",
                     element:<About/>,
+                    children: [
+                        {
+                        path:"profile",
+                        element:<Profile/>,
+                        },
+                    ]
                 },
                 {
                     path:"/contact",
