@@ -1,33 +1,26 @@
 import {IMG_CDN_LINK} from '../constants';
+import { useContext } from 'react';
+import UserContext from '../utils/UserContext';
 import './RestrauntCard.css';
 
-const RestrauntCard = ({ cloudinaryImageId, name, cuisines, costForTwo }) => (
-        <div className="card">
-        <img className="dish" src={`${IMG_CDN_LINK}${cloudinaryImageId}`} alt={name} />
-        <h3>{name}</h3>
-        <p>{cuisines.join(", ")}</p>
-        <p>{costForTwo}</p>
+const RestrauntCard = ({ 
+    cloudinaryImageId, 
+    name, 
+    cuisines, 
+    costForTwo 
+}) => {
+    const {user} = useContext(UserContext);
+    return (
+        <div className="p-2 m-2 bg-pink-200 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 w-64 min-h-[350px] flex flex-col">
+        <img className="w-full h-40 object-cover rounded-t-xl" src={`${IMG_CDN_LINK}${cloudinaryImageId}`} alt={name} />
+        <div className="p-4 flex flex-col flex-grow">
+            <h3 className="font-bold text-lg mb-1">{name}</h3>
+            <p className="text-gray-600 text-sm flex-grow">{cuisines.join(", ")}</p>
+            <p className="text-teal-500 font-semibold mt-auto">{costForTwo}</p>
+            <h5 className='font-bold'>{user.name} - {user.email}</h5>
+        </div>
         </div>
         );
-
-// const RestrauntCard = ({ restaurant }) =>{
-
-//     if (!restaurant) return null; 
-    
-//     return(
-//         <div className='card'>
-//             <img 
-//             className="dish" 
-//             src={IMG_CDN_LINK+ (restaurant.cloudinaryImageId || "placeholder_image_id")}
-//             >
-//             </img>
-//             <h2>{restaurant.name || "Restaurant Name"}</h2>
-//             <h4>{restaurant.cuisines?.join(", ") || "Cuisines not available"}</h4>
-//             <p>Cost for Two: {restaurant.costForTwo || "N/A"}</p>
-//             <p>Average Rating: {restaurant.avgRating || "Not Rated"}</p>
-//             <p>Delivery Time: {restaurant.sla?.deliveryTime || "N/A"} mins</p>
-//         </div>
-//     );
-// };
+}
 
 export default RestrauntCard;

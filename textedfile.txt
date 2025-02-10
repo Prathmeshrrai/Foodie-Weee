@@ -2325,3 +2325,168 @@ const handleScroll = () => {
     window.addEventListener('scroll', handleScroll);
 
         // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.99740&lng=79.00110&restaurantId=151518&catalog_qa=undefined&submitAction=ENTER"
+
+
+// import { useState } from 'react';
+// import './Header.css';
+// import Logo from '../assets/img/scar.jpg';
+// import { Link } from 'react-router';
+// import useOnline from '../utils/useOnline';
+
+// export const Title = () => (
+//     <a href='/'>
+//         <img 
+//             className="w-12 h-12 object-cover rounded-full mr-2 hover:scale-110 transition-transform duration-300"
+//             // className='img-str'
+//             alt="Ain't Starbucks" 
+//             src={Logo}
+//         />
+//     </a>
+// );
+
+// const Header = () => {
+//     const [isNavActive, setIsNavActive] = useState(false);
+
+//     const isOnline = useOnline();
+
+//     return (
+//         <div className="flex justify-between items-center bg-gradient-to-r from-pink-500 to-blue-500 text-white shadow-lg p-4">
+//             <Title />
+//             <div className="lg:hidden text-3xl cursor-pointer"
+//             onClick={() => setIsNavActive(!isNavActive)}>
+//                 ☰
+//             </div>
+//             <div className={`nav-items ${isNavActive ? 'active' : ''}`}>
+//             <nav className={`flex-col lg:flex lg:flex-row lg:items-center ${isNavActive ? "flex" : "hidden"} absolute lg:static right-4 top-16 bg-white p-4 rounded-md shadow-lg lg:shadow-none`}>
+//                 <ul className="flex flex-col lg:flex-row gap-4 py-10">
+//                     <Link className="hover:text-teal-500" to = "/">
+//                     <li className='px-2'>Home</li>
+//                     </Link>
+//                     <Link className="hover:text-teal-500" to="/about">
+//                     <li className='px-2'>About</li>
+//                     </Link>
+//                     <Link className="hover:text-teal-500" to="/contact">
+//                     <li className='px-2'>Contact</li>
+//                     </Link>
+//                     <Link className="hover:text-teal-500" to="/cart">
+//                     <li className='px-2'>Cart</li>
+//                     </Link>
+//                     <Link className="hover:text-teal-500" to="/instamart">
+//                     <li className='px-2'>InstaMart</li>
+//                     </Link>
+//                 </ul>
+//                 </nav>
+//             </div> 
+//             <div className="ml-4 text-sm">
+//             <span className="mr-2">{isOnline ? "🟢 ACTIVE" : "🔴 INACTIVE"}</span>
+//             {
+//                 isNavActive? (
+//                 <button className="bg-teal-500 text-white px-3 py-1 rounded-md hover:bg-teal-600 transition-colors"
+//                 onClick={()=>setIsNavActive(false)}>Login</button>
+//                 ):(
+//                     <button className="bg-gray-500 text-white px-3 py-1 rounded-md hover:bg-gray-600 transition-colors"
+//                     onClick={()=>setIsNavActive(true)}>LogOut</button>
+//                 )
+//             } 
+//             </div>
+//             </div>
+//     );
+// };
+
+// export default Header;
+
+
+// import RestrauntCard from './RestrauntCard';
+// import { useState, useEffect } from 'react';
+// import Shimmer from './Shimmer';
+// import { Link } from 'react-router-dom';
+// import useOnline from '../utils/useOnline';
+// import { filterData } from '../utils/helper';
+
+// const Body = () => {
+//   const [allRestaurants, setAllRestaurants] = useState([]);
+//   const [filteredRestaurants, setFilteredRestaurants] = useState([]);
+//   const [searchText, setSearchText] = useState("");
+
+//   useEffect(() => {
+//     getRestaurants();
+//   }, []);
+
+//   async function getRestaurants(offset = 0) {
+//     const data = await fetch(
+//       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.99740&lng=79.00110&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING&offset=0&pageSize=100"
+//     );
+//     const json = await data.json();
+
+//     const restaurants =
+//       json?.data?.cards?.find(
+//         (card) => card.card?.card?.gridElements?.infoWithStyle?.restaurants
+//       )?.card?.card?.gridElements?.infoWithStyle?.restaurants || [];
+
+//     setAllRestaurants(restaurants);
+//     setFilteredRestaurants(restaurants);
+//   }
+
+//   const isOnline = useOnline();
+//   if (!isOnline) {
+//     return (
+//       <h1 className="text-xl font-semibold text-center my-8">
+//         🔴 Offline, please check your internet connection!!
+//       </h1>
+//     );
+//   }
+
+//   if (!allRestaurants) return null;
+
+//   return allRestaurants.length === 0 ? (
+//     <Shimmer />
+//   ) : (
+//     <>
+//       {/* 🔍 Search Box (Minimalist & Inline) */}
+//       <div className="flex justify-center mt-4">
+//         <div className="flex items-center border border-gray-300 rounded-full shadow-sm w-full max-w-md">
+//           <input
+//             type="text"
+//             value={searchText}
+//             placeholder="Search for restaurants..."
+//             className="flex-grow p-2 rounded-l-full focus:outline-none focus:ring-2 focus:ring-teal-500 text-black"
+//             onChange={(e) => {
+//               setSearchText(e.target.value);
+//               setFilteredRestaurants(filterData(e.target.value, allRestaurants));
+//             }}
+//             onKeyDown={(e) => {
+//               if (e.key === "Enter") {
+//                 setFilteredRestaurants(filterData(searchText, allRestaurants));
+//               }
+//             }}
+//           />
+//           <button
+//             className="bg-teal-500 text-white px-4 py-2 rounded-r-full hover:bg-teal-600 transition-colors"
+//             onClick={() => {
+//               setFilteredRestaurants(filterData(searchText, allRestaurants));
+//             }}
+//           >
+//             🔍
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* 🍽️ Restaurant Grid */}
+//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-4">
+//         {filteredRestaurants.length > 0 ? (
+//           filteredRestaurants.map((restaurant) => (
+//             <Link to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
+//               <RestrauntCard {...restaurant.info} />
+//             </Link>
+//           ))
+//         ) : (
+//           <h1 className="col-span-full text-center text-xl text-gray-600">
+//             ❌ No restaurants match your search.
+//           </h1>
+//         )}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Body;

@@ -1,0 +1,109 @@
+**Prathmesh Rai**  
+Kalyan East, India | prathmeshrai.dev@gmail.com | +91 XXXXXXXXXX | GitHub: github.com/MERN-BLOG-APP | Portfolio: prathmeshrai.dev  
+
+---  
+
+### **Frontend Developer**  
+Passionate Frontend Developer with hands-on experience in building responsive and scalable web applications. Skilled in **ReactJS, JavaScript, HTML, CSS**, and **state management** with a strong understanding of UI/UX principles.  
+
+---  
+
+### **Technical Skills**  
+**Frontend:** ReactJS, JavaScript, HTML, CSS, Tailwind CSS, Redux | **Backend:** Node.js, Express.js, MongoDB  
+**Tools:** Git, GitHub, Firebase, JWT, bcrypt | **Other:** Data Analytics Fundamentals (Certified by NASSCOM)  
+
+---  
+
+### **Projects**  
+
+**Foodie Wee (ReactJS, Firebase, API Integration)** | [Live Demo: Your Website URL]  
+- Developed a **food ordering web app** with an intuitive UI and smooth navigation.  
+- Integrated **Firebase Authentication** for secure login/signup.  
+- Optimized performance using **lazy loading and code splitting**.  
+
+**E-Commerce Website (HTML, CSS, JavaScript)**  
+- Built a **responsive** e-commerce platform with product listings, user authentication, and a shopping cart.  
+
+**Portfolio Website (ReactJS, ThreeJS)**  
+- Created an interactive **3D portfolio** showcasing projects dynamically.  
+
+**MERN Blog App (MongoDB, Express, React, Node)**  
+- Designed a **full-stack blogging platform** with user authentication and rich text editing.  
+
+---  
+
+### **Experience**  
+
+**Frontend Developer Intern - codeX (Aug 2024 – Sep 2024, Remote)**  
+- Built and deployed **ReactJS** applications with optimized performance.  
+- Improved UI/UX with **state management** and responsiveness.  
+
+**Assistant Manager - Kotak Mahindra Bank (Oct 2023 – Apr 2024)**  
+- Improved the **account creation process** and enhanced user experience.  
+
+---  
+
+### **Education**  
+**B.Sc. in Computer Science** - SST College of Arts, Science & Commerce (2020-2023) | **CGPA: 9.39**  
+
+---  
+
+### **Certifications**  
+- **Fundamentals of Data Analytics** - NASSCOM, IT-ITeS SSC  
+- **Python Programming** - Udemy  
+- **AWS-DEV: Building Modern .NET Apps** - edX  
+- **Linux Fundamentals** - edX
+
+
+
+
+
+
+
+
+Prathmesh Rai
+Kalyan East, India | prathmeshrai.dev@gmail.com | +91 XXXXXXXXXX | GitHub: github.com/MERN-BLOG-APP | Portfolio: prathmeshrai.dev
+________________________________________
+Frontend Developer
+Passionate Frontend Developer with hands-on experience in building responsive and scalable web applications. Skilled in ReactJS, JavaScript, HTML, CSS, and state management with a strong understanding of UI/UX principles. Eager to contribute to innovative projects in a dynamic team environment.
+________________________________________
+Technical Skills
+•	Frontend: ReactJS, JavaScript, HTML, CSS, Tailwind CSS, Redux
+•	Backend: Node.js, Express.js, MongoDB
+•	Tools & Platforms: Git, GitHub, Firebase, JWT, bcrypt
+•	Other: Data Analytics Fundamentals (Certified by NASSCOM)
+________________________________________
+Projects
+Foodie Wee (ReactJS, Firebase, API Integration)
+Live Demo: [Your Website URL]
+•	Developed a food ordering web app with an intuitive UI and smooth navigation.
+•	Integrated Firebase Authentication for secure login/signup.
+•	Optimized performance using lazy loading and code splitting.
+E-Commerce Website (HTML, CSS, JavaScript)
+•	Built a fully responsive e-commerce platform with product listings, user authentication, and a shopping cart.
+•	Integrated EmailJS to enable direct customer inquiries.
+Portfolio Website (ReactJS, ThreeJS)
+•	Created an interactive 3D portfolio using ThreeJS to showcase projects dynamically.
+•	Optimized UI for multiple screen sizes and devices.
+MERN Blog App (MongoDB, Express, React, Node)
+•	Designed a full-stack blogging platform with user authentication, rich text editing, and CRUD functionality.
+•	Implemented JWT authentication and image upload capabilities.
+________________________________________
+Work Experience
+Frontend Developer Intern - codeX (Aug 2024 – Sep 2024, Remote)
+•	Built and deployed ReactJS applications with optimized performance.
+•	Improved UI/UX through state management and responsive design.
+•	Enhanced performance by 15% using lazy loading & code splitting.
+Assistant Manager - Kotak Mahindra Bank (Oct 2023 – Apr 2024)
+•	Improved the account creation process and enhanced user experience.
+•	Ensured compliance with user authentication protocols, increasing security.
+________________________________________
+Education
+B.Sc. in Computer Science - SST College of Arts, Science & Commerce (2020-2023) | CGPA: 9.39
+________________________________________
+Certifications
+•	Fundamentals of Data Analytics - NASSCOM, IT-ITeS SSC
+•	Python Programming - Udemy
+•	AWS-DEV: Building Modern .NET Apps - edX
+•	Linux Fundamentals - edX
+
