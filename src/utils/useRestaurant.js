@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {FETCH_URL_LINK} from "../constants";
+import { useEffect } from "react";
 
 const useRestaurant = (id) =>{
     const[restaurantInfo, setRestaurantInfo] = useState(null);

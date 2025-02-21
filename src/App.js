@@ -11,6 +11,9 @@ import Contact from './components/Contact.js';
 import RestaurantMenu from './components/RestaurantMenu.js';
 import Shimmer from './components/Shimmer.js';
 import UserContext from './utils/UserContext.js';
+import { Provider } from 'react-redux';
+import store from './utils/store.js';
+import Cart from './components/Cart.js';
 //import InstaMart from './components/InstaMart.js';
 
     const InstaMart = lazy(()=> import("./components/InstaMart"));
@@ -24,7 +27,7 @@ import UserContext from './utils/UserContext.js';
         });
 
         return(
-            <>
+            <Provider store={store}>
             <UserContext.Provider 
             value={{
                 user: user,
@@ -38,7 +41,7 @@ import UserContext from './utils/UserContext.js';
                 <Outlet/>
                 <Footer/>
             </UserContext.Provider>
-            </>
+            </Provider>
         )
     }
 
@@ -85,6 +88,10 @@ import UserContext from './utils/UserContext.js';
                     element:<Suspense fallback={<Shimmer/>}> 
                         <InstaMart/>
                     </Suspense>,
+                },
+                {
+                    path: "/cart",
+                    element: <Cart />,
                 },
             ]
         },

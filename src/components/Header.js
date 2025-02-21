@@ -4,6 +4,8 @@ import Logo from '../assets/img/scar.jpg';
 import { Link } from 'react-router';
 import useOnline from '../utils/useOnline';
 import UserContext from '../utils/UserContext';
+import { useSelector } from "react-redux";
+
 
 export const Title = () => (
     <a href='/'>
@@ -20,6 +22,10 @@ const Header = () => {
     const isOnline = useOnline();
 
     const {user} = useContext(UserContext);
+
+    const cartItems = useSelector((store) => store.cart.items);
+    console.log(cartItems);
+
     return (
         <div className="flex justify-between items-center bg-gradient-to-r from-pink-500 to-blue-500 text-white shadow-lg p-4 bg-pink-300">
             <Title />
@@ -45,11 +51,14 @@ const Header = () => {
                         <Link className="hover:text-yellow-300" to="/contact">
                             <li className='px-2'>Contact</li>
                         </Link>
-                        <Link className="hover:text-yellow-300" to="/cart">
+                        {/* <Link className="hover:text-yellow-300" to="/cart">
                             <li className='px-2'>Cart</li>
-                        </Link>
+                        </Link> */}
                         <Link className="hover:text-yellow-300" to="/instamart">
                             <li className='px-2'>InstaMart</li>
+                        </Link>
+                        <Link className="hover:text-yellow-300" to="/cart">
+                        <li className="px-2">Cart- {cartItems.length} items</li>
                         </Link>
                     </ul>
                 </nav>
