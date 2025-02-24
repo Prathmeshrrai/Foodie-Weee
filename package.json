@@ -2,6 +2,7 @@
   "name": "foodie-wee",
   "version": "1.0.0",
   "description": "Food app",
+  "type": "module",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
@@ -27,7 +28,8 @@
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-router": "^7.1.5",
-    "react-router-dom": "^7.1.5"
+    "react-router-dom": "^7.2.0",
+    "redux": "^5.0.1"
   },
   "browserslist": [
     "> 0.5%",
