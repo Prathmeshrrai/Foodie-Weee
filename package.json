@@ -2,6 +2,7 @@
   "name": "foodie-wee",
   "version": "1.0.0",
   "description": "Food app",
+  "homepage": "https://Prathmeshrrai.github.io/Foodie-Weee",
   "type": "module",
   "scripts": {
     "start": "parcel index.html",

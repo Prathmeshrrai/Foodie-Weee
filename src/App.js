@@ -1,6 +1,6 @@
 import React, {lazy, Suspense, useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 import Body from './components/Body.js';
@@ -46,7 +46,7 @@ import Cart from './components/Cart.js';
     }
 
     
-    const appRouter = createBrowserRouter([
+    const appRouter = createHashRouter([
         {
             path:"/",
             element:<AppLayout/>,
