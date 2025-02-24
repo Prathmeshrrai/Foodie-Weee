@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest"
   },
   "author": "Prathmesh rai",
